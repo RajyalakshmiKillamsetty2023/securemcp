@@ -1,0 +1,18 @@
+{
+  "name": "securemcp-api-node",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "test": "node --test \"tests/*.test.js\""
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^8.0.0",
+    "pino": "^9.4.0",
+    "zod": "^3.23.0"
+  }
+}

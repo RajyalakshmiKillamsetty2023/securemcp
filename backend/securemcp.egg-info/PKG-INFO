@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: securemcp
+Version: 0.1.0
+Requires-Python: <3.13,>=3.11
+Requires-Dist: fastapi<1,>=0.115
+Requires-Dist: uvicorn[standard]<1,>=0.30
+Requires-Dist: pydantic<3,>=2.7
+Requires-Dist: pydantic-settings<3,>=2.3
+Requires-Dist: httpx<1,>=0.27
+Requires-Dist: pyyaml<7,>=6
+Requires-Dist: pymongo<5,>=4.8
+Provides-Extra: ml
+Requires-Dist: numpy; extra == "ml"
+Requires-Dist: pandas; extra == "ml"
+Requires-Dist: scikit-learn; extra == "ml"
+Requires-Dist: matplotlib; extra == "ml"
+Requires-Dist: sentence-transformers; extra == "ml"
+Requires-Dist: datasets; extra == "ml"
+Provides-Extra: dev
+Requires-Dist: pytest>=8; extra == "dev"
+Requires-Dist: ruff>=0.6; extra == "dev"

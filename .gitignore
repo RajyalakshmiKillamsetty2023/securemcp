@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+node_modules/
+dist/
+.ruff_cache/
+.pytest_cache/
+backend/data/raw/*
+backend/data/processed/*
+backend/app/ml/models/*
+!**/.gitkeep
+.ipynb_checkpoints/
+.DS_Store
