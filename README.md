@@ -95,3 +95,4 @@ before any dataset is downloaded. Raw data is not committed.
 - Repository skeleton, CI (ruff, pytest, Node tests), MongoDB via Docker Compose
 - Minimal FastAPI and Express apps with health endpoints and tests
 - Colab setup notebook
+- Threat model, experiment plan and literature table drafted
