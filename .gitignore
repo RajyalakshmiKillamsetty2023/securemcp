@@ -12,3 +12,4 @@ backend/app/ml/models/*
 !**/.gitkeep
 .ipynb_checkpoints/
 .DS_Store
+llm_cache.jsonl

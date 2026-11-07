@@ -41,4 +41,8 @@ changed after results are seen. Any change goes in a dated "Amendments" section 
 - Promotional descriptions are LLM-written; a hand-checked sample guards label quality.
 
 ## Amendments
-_None yet._
+### 2026-10-08 (before any experiment was run)
+- A1: S1 scores all offered descriptions (max risk); S2/S3 score the chosen tool. See `decisions.md` D1.
+- A2: MCPTox is used as the external set for S1 on all poisoned descriptions; the full gateway is
+  evaluated only on MCPTox hijack-type cases.
+- A3: Thresholds confirmed unchanged.

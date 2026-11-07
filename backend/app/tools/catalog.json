@@ -1,0 +1,140 @@
+[
+  {
+    "name": "get_weather",
+    "description": "Returns the current weather and a short forecast for a city.",
+    "parameters": {
+      "city": {
+        "type": "string",
+        "description": "City name"
+      }
+    }
+  },
+  {
+    "name": "calculator",
+    "description": "Evaluates a basic arithmetic expression and returns the numeric result.",
+    "parameters": {
+      "expression": {
+        "type": "string",
+        "description": "Arithmetic expression such as 12 * (3 + 4)"
+      }
+    }
+  },
+  {
+    "name": "search_flights",
+    "description": "Finds available flights between two cities on a given date.",
+    "parameters": {
+      "origin": {
+        "type": "string",
+        "description": "Departure city"
+      },
+      "destination": {
+        "type": "string",
+        "description": "Arrival city"
+      },
+      "date": {
+        "type": "string",
+        "description": "Date as YYYY-MM-DD"
+      }
+    }
+  },
+  {
+    "name": "db_lookup",
+    "description": "Looks up a record by key in a small customers or products table.",
+    "parameters": {
+      "table": {
+        "type": "string",
+        "description": "customers or products"
+      },
+      "key": {
+        "type": "string",
+        "description": "Record key"
+      }
+    }
+  },
+  {
+    "name": "translate_text",
+    "description": "Translates a short text into a target language.",
+    "parameters": {
+      "text": {
+        "type": "string",
+        "description": "Text to translate"
+      },
+      "target_language": {
+        "type": "string",
+        "description": "Target language"
+      }
+    }
+  },
+  {
+    "name": "get_stock_price",
+    "description": "Returns the latest demo price for a stock ticker symbol.",
+    "parameters": {
+      "ticker": {
+        "type": "string",
+        "description": "Ticker symbol"
+      }
+    }
+  },
+  {
+    "name": "get_news",
+    "description": "Returns recent news headlines about a topic.",
+    "parameters": {
+      "topic": {
+        "type": "string",
+        "description": "News topic"
+      }
+    }
+  },
+  {
+    "name": "convert_currency",
+    "description": "Converts an amount of money from one currency to another (for example USD to EUR).",
+    "group": "convert",
+    "parameters": {
+      "amount": {
+        "type": "number",
+        "description": "Amount"
+      },
+      "from_currency": {
+        "type": "string",
+        "description": "Source currency code"
+      },
+      "to_currency": {
+        "type": "string",
+        "description": "Target currency code"
+      }
+    }
+  },
+  {
+    "name": "convert_units",
+    "description": "Converts a value between units of length or weight (for example km to miles).",
+    "group": "convert",
+    "parameters": {
+      "value": {
+        "type": "number",
+        "description": "Value"
+      },
+      "from_unit": {
+        "type": "string",
+        "description": "Source unit"
+      },
+      "to_unit": {
+        "type": "string",
+        "description": "Target unit"
+      }
+    }
+  },
+  {
+    "name": "create_calendar_event",
+    "description": "Adds an event with a title and date to the user's calendar.",
+    "parameters": {
+      "title": {
+        "type": "string",
+        "description": "Event title"
+      },
+      "date": {
+        "type": "string",
+        "description": "Date as YYYY-MM-DD"
+      }
+    }
+  }
+]
