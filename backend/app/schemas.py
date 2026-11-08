@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import Any, Literal
 
 from pydantic import BaseModel, Field
@@ -44,6 +45,7 @@ class GatewayDecision(BaseModel):
 
 class AgentRunResponse(BaseModel):
     request_id: str
+    created_at: datetime
     query: str
     model: str
     prompt_version: str
@@ -53,3 +55,4 @@ class AgentRunResponse(BaseModel):
     result: ToolResult | None = None
     gateway: GatewayDecision | None = None  # filled from Phase 5
     latency_ms: float
+    logged: bool = False  # true once the run has been saved to storage

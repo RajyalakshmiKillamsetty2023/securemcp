@@ -46,3 +46,18 @@ round-0 detection; promotional-safe at no more than 2x normal FPR.
 
 Decision: the adaptive attacker in E6 is our own black-box rewriting loop (3 rounds, detector feedback),
 as the plan already allowed. Third-party demo repos found (Invariant Labs PoC, others) are not used.
+
+## 2026-11-08
+
+### D6. Saving a run is best-effort
+If MongoDB is unreachable, the agent call still returns normally with `logged: false`, and the error is
+logged. A storage outage must not stop the agent.
+
+### D7. Retry rules in the Node layer
+GET requests retry on connection errors and on 502, 503 and 504. `POST /agent/run` is retried only when
+no connection was made, never after a response, so a run cannot execute or be stored twice.
+
+### D8. Model tag
+The Ollama tag is `qwen2.5:7b`, as listed in the Qwen documentation, which also states that untagged
+Qwen2.5 variants are instruct models. It replaces `qwen2.5:7b-instruct`, which was never checked.
+

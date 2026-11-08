@@ -9,12 +9,14 @@ from app.agent.executor import execute, validate_arguments
 from app.agent.parser import parse_tool_call
 from app.agent.prompts import build_selection_prompt
 from app.agent.tool_registry import ToolRegistry
+from app.api.deps import get_repository
 from app.api.routes_agent import get_agent
 from app.llm.cache import CachedLLM, CacheMiss, JsonlCache
 from app.llm.client import LLMClient
 from app.llm.mock_client import MockLLMClient
 from app.main import app
 from app.schemas import AgentRequest, ToolCall
+from app.storage.repositories import InMemoryRunRepository
 from app.tools.errors import ToolError
 
 
@@ -137,6 +139,7 @@ def test_prompt_contains_all_tools_and_query():
 
 def test_api_run_and_errors():
     app.dependency_overrides[get_agent] = lambda: Agent(MockLLMClient())
+    app.dependency_overrides[get_repository] = lambda: InMemoryRunRepository()
     try:
         c = TestClient(app)
         r = c.post("/agent/run", json={"query": "What is 2 + 2?"})
